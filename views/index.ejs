@@ -36,8 +36,13 @@
             <div class="form-square">
                 <form class="form" action="/" method="post">
                     <div class="input">
+                        <input type="text" value="persegi" name="bangun" hidden>
                         <label for="Sisi">Sisi Persegi:</label>
                         <input type="text" name="sisi" id="sisi">
+                        <select name="satuan" class="satuan">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn">Hitung</button>
@@ -47,11 +52,20 @@
             <div class="form-triangle">
                 <form class="form" action="/" method="post">
                     <div class="input">
+                        <input type="text" value="segitiga" name="bangun" hidden>
                         <label for="alas">Alas Segitiga:</label>
                         <input type="text" name="alas" id="alas">
+                        <select name="satuan" class="satuan">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                        </select>
 
                         <label class="second-label" for="tinggi">Tinggi Segitiga:</label>
                         <input type="text" name="tinggi" id="tinggi">
+                        <select name="satuan" class="satuan">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn">Hitung</button>
@@ -61,8 +75,13 @@
             <div class="form-circle">
                 <form class="form" action="/" method="post">
                     <div class="input">
+                        <input type="text" value="lingkaran" name="bangun" hidden>
                         <label for="jari-jari">Jari-jari Lingkaran:</label>
-                        <input type="text" name="jari-jari" id="jari-jari">
+                        <input type="text" name="jari_jari" id="jari-jari">
+                        <select name="satuan" class="satuan">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn">Hitung</button>
@@ -75,6 +94,52 @@
     <%- include('footer'); %>
 
     <script>
+        // Render DOM Shape Options
+        const shapeTriangle = document.querySelector('.shapes.triangle');
+        const shapeSquare = document.querySelector('.shapes.square');
+        const shapeCircle = document.querySelector('.shapes.circle');
+
+        // Render Form
+        const formTriangle = document.querySelector('.form-triangle');
+        const formSquare = document.querySelector('.form-square');
+        const formCircle = document.querySelector('.form-circle');
+
+        // Function
+        const displayForm = (item) => {
+            // Get event target attribute
+            const shapeType = item.target.getAttribute('alt')
+            switch (shapeType) {
+                case 'segitiga':
+                    formTriangle.style.display = 'block';
+                    formSquare.style.display = 'none';
+                    formCircle.style.display = 'none';
+                    break;
+                case 'persegi':
+                    formTriangle.style.display = 'none';
+                    formSquare.style.display = 'block';
+                    formCircle.style.display = 'none';
+                    break;
+                case 'lingkaran':
+                    formSquare.style.display = 'none';
+                    formTriangle.style.display = 'none';
+                    formCircle.style.display = 'block';
+                    break;
+            }
+        }
+
+        // Add Event
+        shapeTriangle.addEventListener('click', (event) => {
+            displayForm(event)
+        });
+
+        shapeSquare.addEventListener('click', (event) => {
+            displayForm(event)
+        });
+
+        shapeCircle.addEventListener('click', (event) => {
+            displayForm(event)
+        });
+
 
     </script>
 </body>

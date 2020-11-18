@@ -153,6 +153,18 @@ a li {
     margin-bottom: 1rem;
 }
 
+.form-square {
+    display: none;
+}
+
+.form-triangle {
+    display: none;
+}
+
+.form-circle {
+    display: none;
+}
+
 /* .form-container {
     width: 80%;
     max-width: 640px;
@@ -165,6 +177,12 @@ input {
     border: 0;
     height: 2rem;
     width: 30%;
+    background-color: #DBEDF3;
+}
+
+.satuan {
+    padding: 0.4rem 0.5rem;
+    border: 0;
     background-color: #DBEDF3;
 }
 
