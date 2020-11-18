@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Luas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include('header'); %>
+
+    <!-- Content -->
+    <main>
+        <div class="container">
+            <div class="option-text">
+                <h2>Pilih luas bangun datar apa yang ingin anda hitung!</h2>
+            </div>
+            <div class="shapes-option">
+                <div class="shapes triangle">
+                    <img src="Resources/segitiga1.png" alt="segitiga">
+                </div>
+                <div class="shapes square">
+                    <img src="Resources/persegi.png" alt="persegi">
+                </div>
+                <div class="shapes circle">
+                    <img src="Resources/lingkaran.png" alt="lingkaran">
+                </div>
+            </div>
+
+            <div class="form-square">
+                <form class="form" action="/" method="post">
+                    <div class="input">
+                        <label for="Sisi">Sisi Persegi:</label>
+                        <input type="text" name="sisi" id="sisi">
+                    </div>
+
+                    <button type="submit" class="btn">Hitung</button>
+                </form>
+            </div>
+
+            <div class="form-triangle">
+                <form class="form" action="/" method="post">
+                    <div class="input">
+                        <label for="alas">Alas Segitiga:</label>
+                        <input type="text" name="alas" id="alas">
+
+                        <label class="second-label" for="tinggi">Tinggi Segitiga:</label>
+                        <input type="text" name="tinggi" id="tinggi">
+                    </div>
+
+                    <button type="submit" class="btn">Hitung</button>
+                </form>
+            </div>
+
+            <div class="form-circle">
+                <form class="form" action="/" method="post">
+                    <div class="input">
+                        <label for="jari-jari">Jari-jari Lingkaran:</label>
+                        <input type="text" name="jari-jari" id="jari-jari">
+                    </div>
+
+                    <button type="submit" class="btn">Hitung</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('footer'); %>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
