@@ -2,6 +2,7 @@
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
+const fetch = require('node-fetch');
 
 // Use Express
 const app = express();
@@ -16,7 +17,8 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // Function
-const saveData = () => {
+const saveData = (data) => {
+    // set up connection to json file to save data
     fetch('https://localhost:3000/perhitungan', {
             method: 'POST',
             headers: {
@@ -51,7 +53,7 @@ app.post('/', (req, res) => {
                 'satuan': data.satuan,
                 'luas': ((data.alas*data.tinggi)/2).toFixed(2)
             }
-            
+            saveData(newItem1);
             break;
         case "lingkaran":
             const newItem2 = {
@@ -61,7 +63,7 @@ app.post('/', (req, res) => {
                 'satuan': data.satuan,
                 'luas': (3.14*Math.pow(data.jari_jari, 2)).toFixed(2)
             }
-            
+            saveData(newItem2);
             break;
         case "persegi":
             const newItem3 = {
@@ -71,19 +73,9 @@ app.post('/', (req, res) => {
                 'satuan': data.satuan,
                 'luas': Math.pow(data.sisi, 2).toFixed(2)
             }
-        
+            saveData(newItem3);
             break;
     }
-})
-
-app.get('/test', (req, res) => {
-    fs.readFile(`${__dirname}/views/test.csv`, function (err, data) {
-        res.writeHead(200, {
-            'Content-Type': 'text/html'
-        });
-        res.write(data);
-        return res.end();
-    });
 })
 
 app.get('/dashboard', (req, res) => {
