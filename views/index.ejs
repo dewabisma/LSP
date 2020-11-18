@@ -34,7 +34,7 @@
             </div>
 
             <div class="form-square">
-                <form class="form" action="/" method="post">
+                <form class="form" action="/" method="post" onsubmit="return validateFormPersegi()">
                     <div class="input">
                         <input type="text" value="persegi" name="bangun" hidden>
                         <label for="Sisi">Sisi Persegi:</label>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="form-triangle">
-                <form class="form" action="/" method="post">
+                <form class="form" action="/" method="post" onsubmit="return validateFormSegitiga())">
                     <div class="input">
                         <input type="text" value="segitiga" name="bangun" hidden>
                         <label for="alas">Alas Segitiga:</label>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="form-circle">
-                <form class="form" action="/" method="post">
+                <form class="form" action="/" method="post" onsubmit="return validateFormLingkaran()">
                     <div class="input">
                         <input type="text" value="lingkaran" name="bangun" hidden>
                         <label for="jari-jari">Jari-jari Lingkaran:</label>
@@ -98,11 +98,18 @@
         const shapeTriangle = document.querySelector('.shapes.triangle');
         const shapeSquare = document.querySelector('.shapes.square');
         const shapeCircle = document.querySelector('.shapes.circle');
+        
 
         // Render Form
         const formTriangle = document.querySelector('.form-triangle');
         const formSquare = document.querySelector('.form-square');
         const formCircle = document.querySelector('.form-circle');
+
+        // Render Input
+        const inputSisi = document.querySelector('#sisi');
+        const inputAlas = document.querySelector('#alas');
+        const inputTinggi = document.querySelector('#tinggi');
+        const inputJariJari = document.querySelector('#jari-jari');
 
         // Function
         const displayForm = (item) => {
@@ -127,6 +134,36 @@
             }
         }
 
+        const validateFormLingkaran = () => {
+            if (Number.isInteger(parseInt(inputJariJari.value))) {
+                alert("working");
+                return true;
+            } else {
+                alert("please only enter numbers!");
+                return false;
+            }
+        }
+
+        const validateFormSegitiga = () => {
+            if (Number.isInteger(parseInt(inputAlas.value)) && Number.isInteger(parseInt(inputTinggi.value))) {
+                alert("working");
+                return true;
+            } else {
+                alert("please only enter numbers!");
+                return false;
+            }
+        }
+
+        const validateFormPersegi = () => {
+            if (Number.isInteger(parseInt(inputSisi.value))) {
+                alert("working");
+                return true;
+            } else {
+                alert("please only enter numbers!");
+                return false;
+            }
+        }
+
         // Add Event
         shapeTriangle.addEventListener('click', (event) => {
             displayForm(event)
@@ -140,6 +177,7 @@
             displayForm(event)
         });
 
+        
 
     </script>
 </body>

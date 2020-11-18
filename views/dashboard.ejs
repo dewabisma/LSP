@@ -1,17 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <%- include('header'); %>
 
-    <main></main>
+    <main>
+        <div class="container">
+            <!-- Total Perhitungan -->
+            <h2 class="margin-bottom">Data User </h2>
+            <div class="total-perhitungan">
+                <div class="padding total-semua">
+                    <h3>Total Perhitungan</h3>
+                    <p><%= userData.length %></p>
+                </div>
+                <div class="padding total-segitiga">
+                    <h3>Total Perhitungan Segitiga</h3>
+                    <p><%= segitiga[0] %></p>
+                </div>
+                <div class="padding total-persegi">
+                    <h3>Total Perhitungan Persegi</h3>
+                    <p><%= persegi[0] %></p>
+                </div>
+                <div class="padding total-lingkaran">
+                    <h3>Total Perhitungan Lingkaran</h3>
+                    <p><%= lingkaran[0] %></p>
+                </div>
+                <div class="padding nilai-maksimum">
+                    <h3>Luas Maksimum</h3>
+                    <p><%= maximum_value %> cm<sup>2</sup></p>
+                </div>
+                <div class="padding nilai-minimum">
+                    <h3>Luas Minimum</h3>
+                    <p><%= minimum_value %> cm<sup>2</sup></p>
+                </div>
+            </div>
+            <!-- Persentase -->
+            <h3 class="margin">Persentase Jumlah Perhitungan Luas Bangun Datar</h3>
+            <div class="persentanse-perhitungan">
+                <div class="padding persentase-segitiga">
+                    <%= segitiga[1] %>%
+                </div>
+                <div class="padding persentase-persegi">
+                    <%= persegi[1] %>%
+                </div>
+                <div class="padding persentase-lingkaran">
+                    <%= lingkaran[1] %>%
+                </div>
+            </div>
+
+
+            <!-- History Perhitungan -->
+            <h3>History Perhitungan</h3>
+            <% for (let i = userData.length-1; i >= 0; i-- ) { %>
+            <div class="padding history">
+                <p class="time">Waktu : <%= userData[i].time %></p>
+                <p class="bangun">Jenis Bangun Datar : <%= userData[i].jenis %></p>
+                <p class="luas">Luas Bangun Datar : <%= userData[i].luas %> cm<sup>2</sup></p>
+            </div>
+            <% } %>
+        </div>
+
+    </main>
 
     <%- include('footer'); %>
-    
+
+    <script>
+        // Render DOM
+        const persentaseSegitiga = document.querySelector('.persentase-segitiga');
+        const persentasePersegi = document.querySelector('.persentase-persegi');
+        const persentaseLingkaran = document.querySelector('.persentase-lingkaran');
+
+        // Function
+        const setWidthRatio = (object, ratio) => {
+            object.style.width = ratio;
+        }
+
+        // Main
+        setWidthRatio(persentaseSegitiga, persentaseSegitiga.innerHTML);
+        setWidthRatio(persentasePersegi, persentasePersegi.innerHTML);
+        setWidthRatio(persentaseLingkaran, persentaseLingkaran.innerHTML);
+    </script>
 </body>
+
 </html>

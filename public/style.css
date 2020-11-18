@@ -192,6 +192,81 @@ input {
 
 /* Dashboard */
 
+.total-perhitungan {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.padding {
+    padding: 1rem;
+}
+
+.margin {
+    margin: 2rem 0 0 0;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.total-semua {
+    background-color: #00818A;
+}
+
+.total-segitiga {
+    background-color: #e76209;
+}
+
+.total-persegi {
+    background-color: #2d5dfa;
+}
+
+.total-lingkaran {
+    background-color: #404b69;
+}
+
+.nilai-maksimum {
+    background-color: #606b8a;
+}
+
+.nilai-minimum {
+    background-color: #afa62b;
+}
+
+.persentanse-perhitungan {
+    margin: 1rem 0;
+    display: flex;
+    height: 4rem;
+    justify-content: stretch;
+}
+
+.persentase-segitiga {
+    text-align: center;
+    height: 100%;
+    background-color: #e76209;
+}
+
+.persentase-persegi {
+    text-align: center;
+    height: 100%;
+    background-color: #2d5dfa;
+}
+
+.persentase-lingkaran {
+    text-align: center;
+    height: 100%;
+    background-color: #404b69;
+}
+
+.history {
+    border: 1px solid #000;
+}
+
 
 /* Footer */
 

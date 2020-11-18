@@ -1,19 +1,91 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+[
+  {
+    "time": "11/18/2020, 11:22:38 PM",
+    "jenis": "persegi",
+    "sisi": "21",
+    "satuan": "cm",
+    "luas": "441.00"
+  },
+  {
+    "time": "11/18/2020, 11:25:38 PM",
+    "jenis": "persegi",
+    "sisi": "2",
+    "satuan": "cm",
+    "luas": "4.00"
+  },
+  {
+    "time": "11/18/2020, 11:26:16 PM",
+    "jenis": "lingkaran",
+    "jari-jari": "2",
+    "satuan": "cm",
+    "luas": "12.56"
+  },
+  {
+    "time": "11/18/2020, 11:31:00 PM",
+    "jenis": "lingkaran",
+    "jari-jari": "3",
+    "satuan": "cm",
+    "luas": "28.26"
+  },
+  {
+    "time": "11/18/2020, 11:31:13 PM",
+    "jenis": "lingkaran",
+    "jari-jari": "8",
+    "satuan": "cm",
+    "luas": "200.96"
+  },
+  {
+    "time": "11/18/2020, 11:32:55 PM",
+    "jenis": "segitiga",
+    "tinggi": "12",
+    "alas": "6",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "36.00"
+  },
+  {
+    "time": "11/18/2020, 11:33:09 PM",
+    "jenis": "persegi",
+    "sisi": "2",
+    "satuan": "cm",
+    "luas": "4.00"
+  },
+  {
+    "time": "11/18/2020, 11:33:12 PM",
+    "jenis": "persegi",
+    "sisi": "4",
+    "satuan": "cm",
+    "luas": "16.00"
+  },
+  {
+    "time": "11/18/2020, 11:33:15 PM",
+    "jenis": "segitiga",
+    "tinggi": "10",
+    "alas": "5",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "25.00"
+  },
+  {
+    "time": "11/19/2020, 1:04:25 AM",
+    "jenis": "segitiga",
+    "tinggi": "18",
+    "alas": "10",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "90.00"
+  },
+  {
+    "time": "11/19/2020, 1:16:02 AM",
+    "jenis": "persegi",
+    "sisi": "5",
+    "satuan": "cm",
+    "luas": "25.00"
   }
-}
+]
