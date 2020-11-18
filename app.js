@@ -57,8 +57,13 @@ const getMax = () => {
     let maxVal = 0;
     // Loop array
     arrayData.forEach(x => {
+
+        console.log(`x.luas = ${x.luas}, maxVal = ${maxVal}`);
+        console.log(`${x.luas} > ${maxVal}? ${x.luas > maxVal}`);
+        console.log(" ");
+
         // Jika nilai luas saat ini lebih besar dari max value saat ini ganti nilai max value dengan luas saat ini
-        maxVal = x.luas > maxVal ? x.luas : maxVal;
+        maxVal = parseInt(x.luas) > parseInt(maxVal) ? x.luas : maxVal;
     })
     // Mengeluarkan hasil
     return maxVal;
@@ -67,9 +72,15 @@ const getMax = () => {
 const getMin = () => {
     let minVal = Number.MAX_SAFE_INTEGER;
     // Loop array
+
     arrayData.forEach(x => {
+
+        console.log(`x.luas = ${x.luas}, minVal = ${minVal}`);
+        console.log(`${x.luas} < ${minVal}? ${parseInt(x.luas) < parseInt(minVal)}`);
+        console.log(" ");
+
         // Jika nilai luas saat ini lebih kecil dari min value saat ini ganti nilai min value dengan luas saat ini
-        minVal = x.luas < minVal ? x.luas : minVal;
+        minVal = parseInt(x.luas) < parseInt(minVal) ? x.luas : minVal;
     })
     // Mengeluarkan hasil
     return minVal;

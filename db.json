@@ -162,5 +162,23 @@
     "jari-jari": "8",
     "satuan": "cm",
     "luas": "200.96"
+  },
+  {
+    "time": "11/19/2020, 7:39:31 AM",
+    "jenis": "segitiga",
+    "tinggi": "13",
+    "alas": "8",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "52.00"
+  },
+  {
+    "time": "11/19/2020, 7:54:32 AM",
+    "jenis": "persegi",
+    "sisi": "7",
+    "satuan": "cm",
+    "luas": "49.00"
   }
 ]
