@@ -10,7 +10,6 @@ const {
 // Variable
 let rawData = fs.readFileSync(`${__dirname}/db.json`);
 let arrayData = JSON.parse(rawData);
-console.log(arrayData.length);
 
 // Use Express
 const app = express();

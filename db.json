@@ -71,21 +71,96 @@
     "luas": "25.00"
   },
   {
-    "time": "11/19/2020, 1:04:25 AM",
-    "jenis": "segitiga",
-    "tinggi": "18",
-    "alas": "10",
-    "satuan": [
-      "cm",
-      "cm"
-    ],
-    "luas": "90.00"
-  },
-  {
     "time": "11/19/2020, 1:16:02 AM",
     "jenis": "persegi",
     "sisi": "5",
     "satuan": "cm",
     "luas": "25.00"
+  },
+  {
+    "time": "11/19/2020, 1:22:13 AM",
+    "jenis": "segitiga",
+    "tinggi": "16",
+    "alas": "8",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "64.00"
+  },
+  {
+    "time": "11/19/2020, 1:34:19 AM",
+    "jenis": "persegi",
+    "sisi": "7",
+    "satuan": "cm",
+    "luas": "49.00"
+  },
+  {
+    "time": "11/19/2020, 1:36:33 AM",
+    "jenis": "persegi",
+    "sisi": "8",
+    "satuan": "cm",
+    "luas": "64.00"
+  },
+  {
+    "time": "11/19/2020, 1:36:47 AM",
+    "jenis": "persegi",
+    "sisi": "9",
+    "satuan": "cm",
+    "luas": "81.00"
+  },
+  {
+    "time": "11/19/2020, 1:38:36 AM",
+    "jenis": "lingkaran",
+    "jari-jari": "10",
+    "satuan": "cm",
+    "luas": "314.00"
+  },
+  {
+    "time": "11/19/2020, 1:39:02 AM",
+    "jenis": "lingkaran",
+    "jari-jari": "12",
+    "satuan": "cm",
+    "luas": "452.16"
+  },
+  {
+    "time": "11/19/2020, 1:48:32 AM",
+    "jenis": "segitiga",
+    "tinggi": "30",
+    "alas": "18",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "270.00"
+  },
+  {
+    "time": "11/19/2020, 1:49:31 AM",
+    "jenis": "segitiga",
+    "tinggi": "20",
+    "alas": "14",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "140.00"
+  },
+  {
+    "time": "11/19/2020, 1:50:06 AM",
+    "jenis": "segitiga",
+    "tinggi": "15",
+    "alas": "8",
+    "satuan": [
+      "cm",
+      "cm"
+    ],
+    "luas": "60.00"
+  },
+  {
+    "time": "11/19/2020, 1:50:23 AM",
+    "jenis": "lingkaran",
+    "jari-jari": "8",
+    "satuan": "cm",
+    "luas": "200.96"
   }
 ]

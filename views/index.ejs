@@ -50,7 +50,7 @@
             </div>
 
             <div class="form-triangle">
-                <form class="form" action="/" method="post" onsubmit="return validateFormSegitiga())">
+                <form class="form" action="/" method="post" onsubmit="return validateFormSegitiga()">
                     <div class="input">
                         <input type="text" value="segitiga" name="bangun" hidden>
                         <label for="alas">Alas Segitiga:</label>
@@ -136,7 +136,7 @@
 
         const validateFormLingkaran = () => {
             if (Number.isInteger(parseInt(inputJariJari.value))) {
-                alert("working");
+                alert(`Luas Bangun Datar = ${Math.pow(inputJariJari.value,2)*3.14} cm2`);
                 return true;
             } else {
                 alert("please only enter numbers!");
@@ -146,7 +146,7 @@
 
         const validateFormSegitiga = () => {
             if (Number.isInteger(parseInt(inputAlas.value)) && Number.isInteger(parseInt(inputTinggi.value))) {
-                alert("working");
+                alert(`Luas Bangun Datar = ${(inputAlas.value*inputTinggi.value)/2} cm2`);
                 return true;
             } else {
                 alert("please only enter numbers!");
@@ -156,7 +156,7 @@
 
         const validateFormPersegi = () => {
             if (Number.isInteger(parseInt(inputSisi.value))) {
-                alert("working");
+                alert(`Luas Bangun Datar = ${Math.pow(inputSisi.value,2)} cm2`);
                 return true;
             } else {
                 alert("please only enter numbers!");
@@ -176,8 +176,6 @@
         shapeCircle.addEventListener('click', (event) => {
             displayForm(event)
         });
-
-        
 
     </script>
 </body>
